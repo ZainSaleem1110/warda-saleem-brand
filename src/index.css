@@ -1,0 +1,119 @@
+:root{
+    --preNavBg:#151515;
+}
+*{
+    padding: 0px;
+    margin: 0px;
+    box-sizing: border-box;
+    font-size: 12px;
+    letter-spacing: 1px;
+}
+body{
+    overflow-x: hidden;
+}
+.preNav{
+    background: var(--preNavBg);
+    font-size: 11px;
+    letter-spacing: 1px;
+}
+.navList{
+    list-style-type: none;
+}
+.navList li{
+    display: inline-block;
+    font-weight: 600;
+}
+.link{
+    color: black;
+}
+.imgHover{
+    visibility: hidden;
+}
+.imgParents:hover .imgHover{
+    visibility: visible;
+    transition-duration: 1 !important;
+}
+.slider2{
+    position: relative;
+}
+.slider2 img{
+    height: 80vh;
+}
+.homeSlider{
+    overflow: hidden;
+    position: relative;
+    /* top: 90px; */
+}
+.sliderAnime{
+    height: 85vh;
+    background-image: url(./images/sliderImg1.jpg);
+    background-size: 100% 110%;
+    animation-name: homeSlider;
+    animation-duration: 15s;
+    animation-iteration-count: infinite;
+    overflow: hidden;
+    animation-timing-function: ease-out;
+}
+
+@keyframes homeSlider{
+    0%{
+        background-image: url(./images/sliderImg1.jpg);
+        /* transform:scale(1); */
+        
+    }
+    15%{
+        background-image: url(./images/sliderImg2.jpg);
+        transform:scale(1.1);
+
+    }
+    30%{
+        background-image: url(./images/sliderImg3.jpg);
+        transform:scale(1);
+     }
+
+    45%{
+        background-image: url(./images/sliderImg4.jpg);
+        transform:scale(1.1);
+    }
+    
+    60%{
+        background-image: url(./images/sliderImg1.jpg);
+        transform:scale(1.1);
+        
+    }
+    75%{
+        background-image: url(./images/sliderImg2.jpg);
+        transform:scale(1);
+    }
+    90%{
+        background-image: url(./images/sliderImg3.jpg);
+        transform:scale(1.1);
+
+    }
+100%{
+    background-image: url(./images/sliderImg4.jpg);
+    
+}
+}
+@media screen and (max-width:700px) {
+    .sliderAnime{
+        height: 45vh;
+    }
+}
+.dropdown{
+    visibility: hidden;
+}
+.dropParent:hover .dropdown{
+    visibility: visible;
+}
+.textRes{
+    font-size:3vw !important;
+}
+.size{
+    width: 30px;
+    height:30px;
+    border: 1px solid black;
+    display: grid;
+    justify-content: center;
+    align-items: center;
+}
